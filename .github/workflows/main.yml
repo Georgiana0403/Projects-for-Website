@@ -35,6 +35,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: "nodejs-web-app"
           environment_name: "nodejs-web-app-env"
-          version_label: ${{ github.sha }}
+          version_label: "v-${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}"
           region: "eu-central-1"
           deployment_package: "nodejs-web-app.zip"
